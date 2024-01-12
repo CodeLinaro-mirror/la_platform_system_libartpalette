@@ -19,8 +19,7 @@
 #include <android-base/macros.h>
 #include <stdbool.h>
 
-// Unless explicitly mentioned otherwise, the following methods have been
-// introduced in version 1 API, corresponding to SDK level 31.
+// Methods in version 1 API, corresponding to SDK level 31.
 
 palette_status_t PaletteShouldReportDex2oatCompilation(bool* value) {
   *value = 0;
@@ -62,7 +61,8 @@ palette_status_t PaletteNotifyEndJniInvocation(JNIEnv* env ATTRIBUTE_UNUSED) {
   return PALETTE_STATUS_OK;
 }
 
-// Introduced in version 2 API, corresponding to SDK level 33.
+// Methods in version 2 API, corresponding to SDK level 33.
+
 palette_status_t PaletteReportLockContention(
     JNIEnv* env ATTRIBUTE_UNUSED, int32_t wait_ms ATTRIBUTE_UNUSED,
     const char* filename ATTRIBUTE_UNUSED, int32_t line_number ATTRIBUTE_UNUSED,
